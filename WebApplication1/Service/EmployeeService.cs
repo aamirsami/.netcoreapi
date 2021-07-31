@@ -10,12 +10,10 @@ namespace WebApplication1.Service
     {
         private IEmployeeDAL _employeeDAL;
         private IConfiguration _configuration;
-
         public async Task<IEnumerable<Employee>> GetEmployees()
         {
             return await _employeeDAL.GetEmployees();
         }
-
         public async Task<ApiResponse> InsertEmployee(Employee employee)
         {
             ApiResponse response = new ApiResponse();
@@ -43,7 +41,6 @@ namespace WebApplication1.Service
             }
             return response;
         }
-
         public async Task<ApiResponse> UpdateEmployee(Employee employee)
         {
             ApiResponse response = new ApiResponse();
